@@ -1,0 +1,28 @@
+
+        // Click on "From" field
+        driver.findElement(By.xpath("//input[@placeholder='From']")).click();
+
+        // Wait for search container to appear
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='search-container']")));
+
+        // Type "DHA" in search container
+        WebElement searchInput = driver.findElement(By.xpath("//input[@class='search-input']"));
+        searchInput.sendKeys("DHA");
+
+        // Wait for dropdown list to appear
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='dropdown-list']")));
+
+        // Loop through each option in dropdown list
+        List<WebElement> options = driver.findElements(By.xpath("//div[@class='dropdown-list']//div[@class='option']"));
+        for (WebElement option : options) {
+            if (option.getText().contains("Hazrat Shahjalal airport dac")) {
+                Actions actions = new Actions(driver);
+                actions.moveToElement(option).click().perform();
+                actions.sendKeys(Keys.DOWN).sendKeys(Keys.RETURN).perform();
+                break;
+                
+                div[class='search-options'] div:nth-child(2) div:nth-child(1) div:nth-child(2) p:nth-child(2)
+                div[class='search-options'] div:nth-child(2) div:nth-child(1) div:nth-child(2) p:nth-child(2)
+                .item.py-1.px-2.fs-12.d-flex.cursor-pointer.justify-content-between.align-items-center.airport-div
+                div[class='item py-1 px-2 fs-12 d-flex cursor-pointer justify-content-between align-items-center airport-div active'] p[class='mb-0 fw-bold']
