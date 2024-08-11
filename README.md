@@ -1,1 +1,2 @@
-### Please read README.md of each directory to understand what the projects are about
+### For Detailed Information
+Please check the `README.md` file in each directory. It contains all the details about the projects.
