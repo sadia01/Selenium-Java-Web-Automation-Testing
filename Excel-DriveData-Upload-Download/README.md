@@ -119,7 +119,7 @@ The main class, `UploadDownload`, performs the following steps:
 - workbook.write(fos);: Writes the updated workbook to the file.
 - workbook.close(); and fis.close();: Closes the workbook and file input stream to release resources.
 
-**`getRowNumber` Method**
+8. **`getRowNumber` Method**
 - ArrayList<String> a = new ArrayList<String>();: Creates an unused ArrayList. This line can be removed as it doesn't contribute to the method.
 - FileInputStream fis = new FileInputStream(fileName);: Opens the Excel file specified by fileName.
 - XSSFWorkbook workbook = new XSSFWorkbook(fis);: Creates a workbook object to access the Excel file.
@@ -129,7 +129,7 @@ The main class, `UploadDownload`, performs the following steps:
 - while (rows.hasNext()) { ... }: Iterates over each row and its cells to find a cell that matches the specified text.
 - rowIndex = k;: Sets the row index if the cell matches the specified text.
 
-**`getColumnNumber Method`**
+9. **`getColumnNumber Method`**
 - ArrayList<String> a = new ArrayList<String>();: Creates an unused ArrayList. This line can be removed as it doesn't contribute to the method.
 - FileInputStream fis = new FileInputStream(fileName);: Opens the Excel file specified by fileName.
 - XSSFWorkbook workbook = new XSSFWorkbook(fis);: Creates a workbook object to access the Excel file.
