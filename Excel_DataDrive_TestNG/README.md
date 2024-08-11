@@ -37,7 +37,7 @@ This Java class, `E03_dataDrivenExcel`, is designed for data-driven testing. It 
 
 
 
-# Code Funnctionality Explanation
+# Code Functionality Explanation
 
 - Defines a public class named dataDriven
 - Defines a public method getData that returns an ArrayList<String>. It takes a single parameter testcaseName of type String
