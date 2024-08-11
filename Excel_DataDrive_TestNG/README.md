@@ -85,22 +85,22 @@ The `T01_dataProviderExcel` Java class is designed for data-driven testing using
 The T01_dataProviderExcel class uses Apache POI to read data from an Excel file and TestNG's @DataProvider to supply this data to test methods. Here’s a detailed explanation of the code:
 
 1. **Class Definition**
-    - public class T01_dataProviderExcel: Defines the class for data-driven testing.
+    - **public class T01_dataProviderExcel:** Defines the class for data-driven testing.
   
 2. **Test Method**
-    - @Test(dataProvider="driveTest"): Marks the testCaseData method as a TestNG test method that will use data provided by the getData method.
-    - public void testCaseData(String greeting, String communication, String id): The test method that takes data provided by getData and prints it.
+    - **@Test(dataProvider="driveTest"):** Marks the testCaseData method as a TestNG test method that will use data provided by the getData method.
+    - **public void testCaseData(String greeting, String communication, String id):** The test method that takes data provided by getData and prints it.
   
 3. **Data Provider Method**
-   - @DataProvider(name="driveTest"): Defines the getData method as a TestNG data provider named "driveTest".
-   - public Object[][] getData() throws IOException: The method that reads data from the Excel file and returns it as a 2D Object array.
+   - **@DataProvider(name="driveTest"):** Defines the getData method as a TestNG data provider named "driveTest".
+   - **public Object[][] getData() throws IOException:** The method that reads data from the Excel file and returns it as a 2D Object array.
 
 5. **File Reading and Data Extraction**
-   - File Input Stream: FileInputStream fis=new FileInputStream(...) creates an input stream to read the Excel file from the specified path.
-   - Workbook Creation: XSSFWorkbook workbook=new XSSFWorkbook(fis) creates a workbook instance representing the entire Excel file.
-   - Sheet Selection: XSSFSheet sheet = workbook.getSheetAt(0) selects the first sheet from the workbook.
-   - Row and Column Count: int rowCount = sheet.getPhysicalNumberOfRows() and int colCount = row.getLastCellNum() determine the number of rows and columns in the sheet.
-   - Data Extraction: Loops through each row and column, reads cell values, and stores them in a 2D Object array (Object data[][]).
+   - **File Input Stream:** FileInputStream fis=new FileInputStream(...) creates an input stream to read the Excel file from the specified path.
+   - **Workbook Creation:** XSSFWorkbook workbook=new XSSFWorkbook(fis) creates a workbook instance representing the entire Excel file.
+   - **Sheet Selection:** XSSFSheet sheet = workbook.getSheetAt(0) selects the first sheet from the workbook.
+   - **Row and Column Count:** int rowCount = sheet.getPhysicalNumberOfRows() and int colCount = row.getLastCellNum() determine the number of rows and columns in the sheet.
+   - **Data Extraction:** Loops through each row and column, reads cell values, and stores them in a 2D Object array (Object data[][]).
   
 5. **Data Formatting**
    - Uses DataFormatter to format cell values, ensuring compatibility with various cell types (e.g., string, numeric).
