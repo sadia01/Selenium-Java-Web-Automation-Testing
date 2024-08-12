@@ -108,38 +108,122 @@ The main class, `UploadDownload`, performs the following steps:
     Checks that the updated value is correctly displayed in the web table.
 
 7. **`updateCell` Method**
-- ArrayList<String> a = new ArrayList<String>();: Creates an unused ArrayList. This line can be removed as it doesn't contribute to the method.
-- FileInputStream fis = new FileInputStream(fileName);: Opens the Excel file specified by fileName.
-- XSSFWorkbook workbook = new XSSFWorkbook(fis);: Creates a workbook object to access the Excel file.
-- XSSFSheet sheet = workbook.getSheet("Sheet1");: Retrieves the sheet named "Sheet1".
-- Row rowField = sheet.getRow(row - 1);: Retrieves the row based on the specified row number (adjusted for zero-based indexing).
-- Cell cellField = rowField.getCell(col - 1);: Retrieves the cell based on the specified column number (adjusted for zero-based indexing).
-- cellField.setCellValue(updatedValue);: Updates the cell with the new value.
-- FileOutputStream fos = new FileOutputStream(fileName);: Prepares to write the changes back to the file.
-- workbook.write(fos);: Writes the updated workbook to the file.
-- workbook.close(); and fis.close();: Closes the workbook and file input stream to release resources.
+
+   ```java
+   ArrayList<String> a=new ArrayList<String>();				
+   FileInputStream fis=new FileInputStream(fileName);		
+   XSSFWorkbook workbook=new XSSFWorkbook(fis);
+   ```
+   - Creates an unused ArrayList. This line can be removed as it doesn't contribute to the method.
+   - Opens the Excel file specified by fileName.
+   - Creates a workbook object to access the Excel file.
+     
+   ```java
+   XSSFSheet sheet=workbook.getSheet("Sheet1");		
+   Row rowField = sheet.getRow(row-1);		
+   Cell cellField = rowField.getCell(col-1);		
+   cellField.setCellValue(updatedValue);
+   ```
+   - Retrieves the sheet named "Sheet1".
+   - Retrieves the row based on the specified row number (adjusted for zero-based indexing).
+   - Retrieves the cell based on the specified column number (adjusted for zero-based indexing).
+   - Updates the cell with the new value.
+   
+    
+  ```java
+  FileOutputStream fos= new FileOutputStream(fileName);	
+  workbook.write(fos);
+  workbook.close();		
+  fis.close();		
+ ```
+   - Prepares to write the changes back to the file.
+   - Writes the updated workbook to the file.
+   - Closes the workbook and file input stream to release resources.
+
 
 8. **`getRowNumber` Method**
-- ArrayList<String> a = new ArrayList<String>();: Creates an unused ArrayList. This line can be removed as it doesn't contribute to the method.
-- FileInputStream fis = new FileInputStream(fileName);: Opens the Excel file specified by fileName.
-- XSSFWorkbook workbook = new XSSFWorkbook(fis);: Creates a workbook object to access the Excel file.
-- XSSFSheet sheet = workbook.getSheet("Sheet1");: Retrieves the sheet named "Sheet1".
-- Iterator<Row> rows = sheet.iterator();: Iterates through the rows of the sheet.
-- int k = 1; int rowIndex = -1;: Initializes row index counter k and the result variable rowIndex.
-- while (rows.hasNext()) { ... }: Iterates over each row and its cells to find a cell that matches the specified text.
-- rowIndex = k;: Sets the row index if the cell matches the specified text.
+   
+  ```java
+  ArrayList<String> a=new ArrayList<String>();	
+  FileInputStream fis=new FileInputStream(fileName);	
+  XSSFWorkbook workbook=new XSSFWorkbook(fis);		
+  ```
+  - Creates an unused ArrayList. This line can be removed as it doesn't contribute to the method.
+  - Opens the Excel file specified by fileName.
+  - Creates a workbook object to access the Excel file.
 
-9. **`getColumnNumber Method`**
-- ArrayList<String> a = new ArrayList<String>();: Creates an unused ArrayList. This line can be removed as it doesn't contribute to the method.
-- FileInputStream fis = new FileInputStream(fileName);: Opens the Excel file specified by fileName.
-- XSSFWorkbook workbook = new XSSFWorkbook(fis);: Creates a workbook object to access the Excel file.
-- XSSFSheet sheet = workbook.getSheet("Sheet1");: Retrieves the sheet named "Sheet1".
-- Iterator<Row> rows = sheet.iterator();: Iterates through the rows of the sheet.
-- Row firstrow = rows.next();: Gets the first row (which contains the column headers).
-- Iterator<Cell> ce = firstrow.cellIterator();: Iterates through the cells of the first row.
-- int k = 1; int column = 0;: Initializes column index counter k and the result variable column.
-- while (ce.hasNext()) { ... }: Iterates over each cell in the first row to find a cell that matches the specified column name.
-- column = k;: Sets the column index if the cell matches the specified column name.
+  ```java
+  XSSFSheet sheet=workbook.getSheet("Sheet1");
+  Iterator<Row>  rows= sheet.iterator();// sheet is collection of rows		
+  int k =1;		
+  int rowIndex= -1;		
+  while(rows.hasNext())
+  {			
+			Row row = rows.next();			
+			Iterator<Cell> cells=row.cellIterator();		
+			
+  while(cells.hasNext())			
+ {  								
+		Cell cell = cells.next();				
+		if(cell.getCellType()== CellType.STRING &&  cell.getStringCellValue().equalsIgnoreCase(text))			
+			
+{	
+	 rowIndex=k;
+}
+}
+			
+k++;
+		
+}	
+	
+```
+ - Retrieves the sheet named "Sheet1".
+ - Iterates through the rows of the sheet.
+ - Initializes row index counter k and the result variable rowIndex.
+ - Iterates over each row and its cells to find a cell that matches the specified text.
+ - Sets the row index if the cell matches the specified text.
+
+9. **`getColumnNumber` Method**
+    
+   ```java
+   ArrayList<String> a=new ArrayList<String>();				
+   FileInputStream fis=new FileInputStream(fileName);		
+   XSSFWorkbook workbook=new XSSFWorkbook(fis);
+   ```
+   - Creates an unused ArrayList. This line can be removed as it doesn't contribute to the method.
+   - Opens the Excel file specified by fileName.
+   - Creates a workbook object to access the Excel file.
+
+   ```java
+   XSSFSheet sheet=workbook.getSheet("Sheet1");	
+   //Identify Testcases coloum by scanning the entire 1st row
+   Iterator<Row>  rows= sheet.iterator();// sheet is collection of rows	
+   Row firstrow= rows.next();
+   Iterator<Cell> ce=firstrow.cellIterator();
+   //row is collection of cells		
+   int k=1;		
+	int coloumn = 0;		
+	while(ce.hasNext())		
+		{	
+			Cell value=ce.next();
+		
+			if(value.getStringCellValue().equalsIgnoreCase(colName))	
+			{		
+				coloumn=k;
+		    }
+			
+			k++;		
+			}		
+   ```
+   - Retrieves the sheet named "Sheet1".
+   - Iterates through the rows of the sheet.
+   - Creates a workbook object to access the Excel file.
+   - Gets the first row (which contains the column headers)
+   - Iterates through the cells of the first row.
+   - Initializes column index counter k and the result variable column.
+   - Iterates over each cell in the first row to find a cell that matches the specified column name.
+   - Sets the column index if the cell matches the specified column name.
+
 
 
 
