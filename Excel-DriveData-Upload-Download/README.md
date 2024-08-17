@@ -43,6 +43,9 @@ The main class, `UploadDownload`, performs the following steps:
 2. **Download File**
 
     ```java
+    String fruitName = "Apple";
+    String updatedValue = "603";
+    String fileName = (System.getProperty("user.dir") + "//src//test//java//excelData//download.xlsx");
     driver.findElement(By.cssSelector("#downloadButton")).click();
     ```
 
