@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-23T02:56:52 BDT" name="ParallelTestSuite" finished-at="2024-09-23T02:59:55 BDT" duration-ms="182810">
+    <groups>
+    </groups>
+    <test started-at="2024-09-23T02:56:52 BDT" name="LogIn Submit Order Test" finished-at="2024-09-23T02:59:13 BDT" duration-ms="140854">
+      <class name="tests.TC002_LogInSubmitOrderTest">
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:tests.TC002_LogInSubmitOrderTest@70f59913]" started-at="2024-09-23T02:56:52 BDT" name="setDriver" finished-at="2024-09-23T02:57:02 BDT" duration-ms="10085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="loginSubmitOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TC002_LogInSubmitOrderTest@70f59913]" started-at="2024-09-23T02:57:02 BDT" name="loginSubmitOrder" data-provider="combinedLoginCheckoutData" finished-at="2024-09-23T02:57:58 BDT" duration-ms="55495" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[plengorm@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pleng1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[01630189022]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[plengorm@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSubmitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TC002_LogInSubmitOrderTest@70f59913]" started-at="2024-09-23T02:57:58 BDT" name="tearDown" finished-at="2024-09-23T02:57:58 BDT" duration-ms="655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:tests.TC002_LogInSubmitOrderTest@70f59913]" started-at="2024-09-23T02:57:58 BDT" name="setDriver" finished-at="2024-09-23T02:58:08 BDT" duration-ms="9935" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="loginSubmitOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TC002_LogInSubmitOrderTest@70f59913]" started-at="2024-09-23T02:58:08 BDT" name="loginSubmitOrder" data-provider="combinedLoginCheckoutData" finished-at="2024-09-23T02:59:12 BDT" duration-ms="63585" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wanwiwa@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wan1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[01987666789]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[wanwiwa@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSubmitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TC002_LogInSubmitOrderTest@70f59913]" started-at="2024-09-23T02:59:12 BDT" name="tearDown" finished-at="2024-09-23T02:59:13 BDT" duration-ms="931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.TC002_LogInSubmitOrderTest -->
+    </test> <!-- LogIn Submit Order Test -->
+    <test started-at="2024-09-23T02:56:52 BDT" name="Create Account Submit Order Test" finished-at="2024-09-23T02:59:55 BDT" duration-ms="182810">
+      <class name="tests.TC001_CreateAccountSubmitOrderTest">
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:tests.TC001_CreateAccountSubmitOrderTest@73194df]" started-at="2024-09-23T02:56:52 BDT" name="setDriver" finished-at="2024-09-23T02:57:02 BDT" duration-ms="10294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="CreateAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TC001_CreateAccountSubmitOrderTest@73194df]" started-at="2024-09-23T02:57:02 BDT" name="CreateAccount" data-provider="combinedAccountCheckoutData" finished-at="2024-09-23T02:58:20 BDT" duration-ms="77522" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dereb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Cith]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[derebzbith@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[01681330128]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[cole1234]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[cole1234]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Dereb]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Cith]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[derebzbith@hotmail.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Dhaka]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Rayerbazar, Dhanmondi]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[01681330128]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TC001_CreateAccountSubmitOrderTest@73194df]" started-at="2024-09-23T02:58:20 BDT" name="tearDown" finished-at="2024-09-23T02:58:20 BDT" duration-ms="451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:tests.TC001_CreateAccountSubmitOrderTest@73194df]" started-at="2024-09-23T02:58:20 BDT" name="setDriver" finished-at="2024-09-23T02:58:38 BDT" duration-ms="17616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="CreateAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TC001_CreateAccountSubmitOrderTest@73194df]" started-at="2024-09-23T02:58:38 BDT" name="CreateAccount" data-provider="combinedAccountCheckoutData" finished-at="2024-09-23T02:59:54 BDT" duration-ms="76225" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cordon]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Wik]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[cordonwik@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[01714256443]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[camry1234]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[camry1234]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Cordon]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Wik]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[cordonwik@gmail.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Bagerhat]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Bagerhat Sadar]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[01714256443]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TC001_CreateAccountSubmitOrderTest@73194df]" started-at="2024-09-23T02:59:54 BDT" name="tearDown" finished-at="2024-09-23T02:59:55 BDT" duration-ms="579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.TC001_CreateAccountSubmitOrderTest -->
+    </test> <!-- Create Account Submit Order Test -->
+  </suite> <!-- ParallelTestSuite -->
+</testng-results>
